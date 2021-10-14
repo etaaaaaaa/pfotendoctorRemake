@@ -1,13 +1,355 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+* {
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+select:hover {
+  cursor: pointer;
+}
+input:hover {
+  cursor: pointer;
+}
+button:hover {
+  cursor: pointer;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  background-color: #fff2eb;
+  -webkit-text-stroke: 1px transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.popup_container {
+  position: fixed;
+  max-width: 90vw;
+  top: 2rem;
+  left: 1rem;
+  padding: 1rem 1rem 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+/* .popup_container::after{
+  content: "";
+  z-index: -3;
+  position: fixed;
+  background-color: #000000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.8;
+} */
+.popup_close:hover {
+  cursor: pointer;
+}
+
+.container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 105px;
+  position: relative;
+}
+
+.intro {
+  height: auto;
+}
+
+.btn_back {
+  color: #ff8766;
+  font-family: 'Sorce Sans Pro', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  position: absolute;
+  top: -40px;
+  left: 0;
+}
+
+.intro_logo {
+  width: 12rem;
+  display: block;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro_headline {
+  margin: 0;
+  color: #666666;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.intro_vet-heads {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro_subheadline {
+  text-align: center;
+  color: #333;
+  font-size: 1rem;
+}
+
+.intro_ul {
+  list-style-type: none;
+  background-color: #fafafa;
+  padding: 24px;
+  color: #4d4d4d;
+  font-size: 18px;
+}
+
+.intro_li {
+  display: flex;
+  padding-bottom: 16px;
+}
+
+.intro_li-checkmark {
+  width: 32px;
+  display: block;
+  margin-right: 16px;
+}
+
+.intro_certifications {
+  width: 100%;
+  display: block;
+  margin-top: 32px;
+}
+
+.form {
+  background-color: #ffffff;
+}
+
+.form_tool-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 55px;
+  margin-bottom: 30px;
+}
+
+.form_btn-back {
+  border: none;
+  background-color: transparent;
+  height: 24px;
+  font-size: 19px;
+  display: inline-block;
+  align-self: center;
+  color: #ff8766;
+}
+
+.time-box {
+  display: inline-block;
+  padding: 12px 16px;
+  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 10%);
+  border-radius: 6px;
+  height: 44px;
+  font-size: 1rem;
+}
+
+.time-box_pic {
+  padding-right: 8px;
+}
+
+.time-box_text {
+  color: #06c29d;
+  vertical-align: middle;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.form_btn {
+  border: 2px solid #ffb29d;
+  color: #cc7052;
+  background-color: #ffffff;
+  font-size: 1rem;
+  
+  flex-grow: 1;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form_btn:hover {
+  cursor: pointer;
+}
+.active {
+  background-color: #ffe7e0;
+}
+
+.form_communication-btns {
+  display: flex;
+  margin-bottom: 16px;
+}
+.form_communication-btns > button {
+  height: 76px;
+  width: 50%;
+}
+.form_communication-btns > button:first-child {
+  margin-right: 16px;
+}
+
+.form_text {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.form_communication-info-pic {
+  width: 32px;
+}
+
+.form_communication-info {
+  display: inline-block;
+  color: #ff8766;
+  font-weight: 600;
+  vertical-align: middle;
+  padding-bottom: 23px;
+  padding-left: 8px;
+}
+.form_communication-info:hover {
+  cursor: pointer;
+}
+
+.form_animalInfo-btns {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form_animalInfo-btns > button {
+  height: 56px;
+  width: 45%;
+}
+.form_animalInfo-btns > button:nth-child(odd) {
+  margin-right: 16px;
+}
+.form_animalInfo-btns > button:nth-child(n+1) {
+  margin-bottom: 16px;
+}
+.form_animalInfo-btns > button:nth-child(n+3) {
+  height: 76px;
+}
+
+.form_animal-name {
+  margin-bottom: 16px;
+}
+.form_insurance-label {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  display: block;
+}
+.form_insurance-select {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.form_description-title  {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  display: block;
+}
+.form_description-txt {
+  display: block;
+  font-size: .9rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 8px;
+}
+.form_textarea-title {
+  font-size: 16px;
+}
+.form_textarea {
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.form_description-upload {
+  margin-bottom: 32px;
+  display: block;
+}
+
+.form_note {
+  color: #555;
+  font-size: .9rem;
+}
+
+.form_submit-btn {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  height: 49px;
+  margin-bottom: 42px;
+  background-color: #aaaaaa;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  font-size: 15px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    width: 100%;
+    max-width: none;
+  }
+  .intro {
+    border-right: 5px solid #ededed;
+  }
+  .intro_headline {
+    line-height: 1.2;
+    font-size: 1.2rem;
+    margin-top: 16px;
+  }
+  .intro_vet-heads {
+    padding: 0 16px;
+  }
+  .intro_subheadline {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+  }
+  .form {
+    padding: 2rem;
+  }
+  .form_tool-container {
+    margin: 0;
+    padding: 0 1rem;
+  }
+  .time-box_pic {
+    margin-bottom: 5px;
+  }
+  .time-box_text {
+    margin-bottom: 13px;
+  }
+  .form_form {
+    margin-top: 24px;
+    padding: 0 16px;
+  }
+}
+
+@media(min-width: 992px) {
+  .form_animalInfo-btns > button:nth-child(n+3) {
+    height: 56px;
+  }  
 }
